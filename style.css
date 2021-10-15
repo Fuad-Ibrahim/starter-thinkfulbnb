@@ -2,7 +2,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  display: grid;
 }
 
 h2 {
@@ -32,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100%;
+  width: auto%;
 }
 
 /* ---  Groups & Items --- */
@@ -61,21 +60,13 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 60px;
+  font-size: 72px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  flex-direction: row;
-  font: sans-serif;
-  justify-content: center;
 }
 
 header nav ul {
   display: flex;
-  padding-left: 0;
-  list-style: none;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -99,19 +90,20 @@ form {
   padding: 10px;
 }
 
-form label {
-  font-weight: bold;
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-form div {
-  display: flex;
-  justify-content: space-between;
+form label {
+  font-weight: bold;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
-  width: 200px;
+  width: 180px;
 }
 
 form button {
@@ -121,6 +113,12 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+.abt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* -------  Footer ------- */
@@ -137,90 +135,31 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media only screen and (min-width: 680px) {
+  body {
+    border: 3px solid yellow;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
   }
 
-  body {
-    font-family: "Lato", sans-serif;
-    display: grid;
-  }
-
-  .logo {
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
-  }
-
-  header nav ul {
-    align-items: center;
-  }
-
-  .group {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  form {
+  main form {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+  }
+  form button {
+    width: 200px;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
   }
-
-  form div {
-    flex-direction: column;
-  }
-
-  form button {
-    flex: 1;
-  }
-
-  form select,
-  form input {
-    margin-bottom: 0px;
-  }
-  /*iPhone portrait*/
-  @media only screen and (min-width: 320px) {
-    body {
-      border: 3px solid purple;
-    }
-  }
-
-  /*iPhone landscape*/
-  @media only screen and (min-width: 480px) {
-    body {
-      border: 3px solid green;
-    }
-  }
-
-  /*Android landscape*/
-  @media only screen and (min-width: 640px) {
-    body {
-      border: 3px solid pink;
-    }
-  }
-
-  /*iPad potrait*/
-  @media only screen and (min-width: 768px) {
-    body {
-      border: 3px solid red;
-    }
-  }
-
-  /*iPad lanscape / small laptop*/
-  @media only screen and (min-width: 1024px) {
-    body {
-      border: 3px solid blue;
-    }
-  }
-
-  /*large desktop*/
-  @media only screen and (min-width: 1600px) {
-    body {
-      border: 3px solid yellow;
-    }
+  .alternate-background {
+    background-color: #00a699;
   }
 }
